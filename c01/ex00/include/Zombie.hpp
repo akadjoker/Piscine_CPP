@@ -6,9 +6,12 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 18:09:44 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 08:08:51 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:50:35 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
 
 #include <string>
 #include <iostream>
@@ -26,3 +29,5 @@ private:
 
 Zombie* newZombie(std::string name);
 void	randomChump(std::string name);
+
+#endif

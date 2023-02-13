@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:50:02 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 16:15:05 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:27:01 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static float sign_area(const Point a, const Point b, const Point c)
     return result;
 }
 
-bool Point::bsp( const Point a, const Point  b, const Point c, const Point point)
+bool bsp( const Point a, const Point  b, const Point c, const Point point)
 {
    
   // Compute the areas of three smaller triangles formed by point and two sides of the triangle

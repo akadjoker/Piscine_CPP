@@ -6,9 +6,12 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:49:31 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 15:21:17 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:26:44 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef POINT_H
+# define POINT_H
 
 #include "Fixed.hpp"
 
@@ -29,7 +32,9 @@ class Point
         float getX(void) const;
         float getY(void) const;
 
-        static bool bsp( const Point a, const Point  b, const Point c, const Point point);
+        
 };
 
+bool bsp( const Point a, const Point  b, const Point c, const Point point);
 
+#endif

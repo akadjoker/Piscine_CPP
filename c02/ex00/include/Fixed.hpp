@@ -6,11 +6,14 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 12:36:12 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 12:44:18 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:24:14 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+
+#ifndef FIXED_H
+# define FIXED_H
+
 #include <iostream>
 #include <string>
 
@@ -32,3 +35,5 @@ class Fixed
 		static int 	s_bits;
 
 };
+
+#endif

@@ -6,11 +6,12 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 08:27:11 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 09:28:51 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:54:43 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <sstream>
 #include <string>
@@ -110,3 +111,4 @@ inline int    replace(std::fstream &file, std::fstream &new_file, const std::str
 }
 
 } // namespace FT
+#endif

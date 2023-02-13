@@ -6,11 +6,12 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:04:40 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 13:14:50 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:25:44 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef FIXED_H
+# define FIXED_H
 
 #include <iostream>
 #include <string>
@@ -59,3 +60,5 @@ float operator+(Fixed one, Fixed two);
 float operator-(Fixed one, Fixed two);
 float operator*(Fixed one, Fixed two);
 float operator/(Fixed one, Fixed two);
+
+#endif

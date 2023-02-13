@@ -42,7 +42,7 @@ ${OBJS_DIR}/%.o: 	${SRCS_DIR}/%.cpp	${INCLUDES}
 			@echo "\e[91m" " Compile " "\e[0m ($<)" "\e[91m" "  object" "\e[0m ($@)"
 
 clean:
-			@$(RM) $(OBJS)
+			@$(RM) $(OBJS) $(OBJS_DIR)
 			@echo "\e[91m" " Clean  obs" "\e[0m"
 
 fclean:		clean

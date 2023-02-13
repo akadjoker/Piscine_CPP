@@ -1,4 +1,17 @@
-#pragma once
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/13 19:24:46 by lrosa-do          #+#    #+#             */
+/*   Updated: 2023/02/13 19:24:55 by lrosa-do         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FIXED_H
+# define FIXED_H
 
 #include <iostream>
 #include <string>
@@ -30,3 +43,4 @@ class Fixed
 
 std::ostream &operator<<(std::ostream &out, Fixed const &f);
 
+#endif

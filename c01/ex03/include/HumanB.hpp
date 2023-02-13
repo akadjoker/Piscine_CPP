@@ -6,11 +6,14 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 08:39:13 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 08:45:22 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:58:13 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+
+#ifndef HUMANB_H
+# define HUMANB_H
+
 #include <iostream>
 #include "Weapon.hpp"
 
@@ -25,3 +28,5 @@ private:
 	std::string m_name;
 	Weapon* m_weapon;
 };
+
+#endif

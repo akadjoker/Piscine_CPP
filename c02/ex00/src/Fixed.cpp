@@ -6,11 +6,11 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:01:45 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 13:01:47 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:24:28 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "Fixed.hpp"
+#include "Fixed.hpp"
 
 int Fixed::s_bits = 8;
 

@@ -6,11 +6,13 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 18:09:44 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/01 19:02:13 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:57:03 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+
+#ifndef COLORS_H
+# define COLORS_H
 
 /*
 ** TEXT
@@ -116,3 +118,4 @@
 */
 # define RESET			"\e[0m"
 
+#endif

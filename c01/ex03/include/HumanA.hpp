@@ -6,11 +6,13 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 08:38:59 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 08:40:39 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:58:07 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef HUMANA_H
+# define HUMANA_H
+
 #include <iostream>
 #include "Weapon.hpp"
 
@@ -25,3 +27,5 @@ private:
 	std::string m_name;
 	Weapon& m_weapon;
 };
+
+#endif

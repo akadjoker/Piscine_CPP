@@ -6,9 +6,12 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 11:15:50 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 11:28:28 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:59:45 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_H
+# define HARL_H
 
 #include <string>
 #include <iostream>
@@ -32,3 +35,5 @@ private:
 	std::string m_name[4];
 
 };
+
+#endif

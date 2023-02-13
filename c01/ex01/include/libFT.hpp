@@ -6,16 +6,14 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 08:27:11 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/05 08:30:01 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:51:47 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <sstream>
-
-
-
 namespace FT
 {
 
@@ -39,3 +37,4 @@ inline int stoi( std::string & s )
 
 
 } // namespace FT
+#endif
