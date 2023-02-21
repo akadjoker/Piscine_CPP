@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:43:09 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/14 12:43:38 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/21 09:59:02 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 
 	Cat& operator=(Cat const& rhs);
 
-	virtual void	makeSound(void) const;
+	void	makeSound(void) const;
 	std::string		getType(void) const;
 };
 

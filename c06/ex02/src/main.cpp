@@ -5,35 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 11:40:19 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/21 10:11:10 by lrosa-do         ###   ########.fr       */
+/*   Created: 2023/02/21 12:49:39 by lrosa-do          #+#    #+#             */
+/*   Updated: 2023/02/21 16:19:24 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "Brain.hpp"
+#include "Base.hpp"
 
-#define MAX_ANIMALS 5
+# define PINK			"\e[0;38;5;199m"
+# define GREEN			"\e[0;32m"
 
-int	main(void) 
+#define MAX_TEST 5 
+
+int main (void)
 {
-	AAnimal	*animals[MAX_ANIMALS];
-	Cat		cat;
-	Cat		clone = cat;
-
-	for (int i = 0; i < MAX_ANIMALS; i++)
-		i % 2 ? animals[i] = new Cat() : animals[i] = new Dog();
-	animals[0]->makeSound();
-	animals[1]->makeSound();
-	for (int i = 0; i < MAX_ANIMALS; i++)
-		delete animals[i];
-
-	
-	/*
-		AAnimal teste = new AAnimal();
+    for (int i=0;i<MAX_TEST;i++)
+    {
+	  std::cout <<"------------------------------------------------"<< std::endl;
+	  std::cout << PINK<<"Teste (" << i<< ")  \e[0m"<< std::endl;
 		
-	*/
+        Base *base = generate();
+
+        identify(base);
+        identify(*base);
+
+        delete (base);
+      	std::cout << std::endl;
 	
+	}
+    
+    return (0);
 }

@@ -1,37 +1,30 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Conversion.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 12:43:09 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/21 10:03:41 by lrosa-do         ###   ########.fr       */
+/*   Created: 2023/02/21 12:54:52 by lrosa-do          #+#    #+#             */
+/*   Updated: 2023/02/21 14:52:30 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Conversion.hpp"
 
-
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
-
-#include <iostream>
-#include <string>
-
-class WrongAnimal 
+int	main(int argc, char **argv)
 {
-public:
-	WrongAnimal(void);
-	WrongAnimal(WrongAnimal const& animal);
-	~WrongAnimal(void);
-
-	void	operator=(WrongAnimal const& rhs);
-
-	 void			makeSound(void) const;
-	 std::string		getType(void) const;
-
-protected:
-	std::string	type;
-};
-
-#endif
+	if (argc != 2)
+	{
+		std::cout << "Dude!!, Please enter only one argument (litteral or char) to convert !" << std::endl;
+		return 0;
+	}
+	if (argv[1] == NULL)
+	{
+		std::cout << "Dude!!, Input needed" << std::endl;
+		return 0;
+	}
+	Conversion convert(argv[1]);
+	convert.print();
+}

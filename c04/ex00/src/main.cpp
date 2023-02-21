@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:43:09 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/14 12:55:25 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/21 10:00:47 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	main(void)
 	const WrongCat*		m = new WrongCat();
 
 	std::cout << '\n' << i->getType() << " goes\n";
-	i->makeSound(); //will output the cat sound!
+	i->makeSound(); //miau
 	std::cout << '\n' << j->getType() << " goes\n";
-	j->makeSound();
+	j->makeSound();//au au
 	std::cout << "\nAnimal goes\n";
 	meta->makeSound();
 	std::cout << "\nWrongCat ptr goes\n";
