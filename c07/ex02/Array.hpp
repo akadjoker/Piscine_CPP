@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/21 18:33:01 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/22 16:03:17 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ template <typename T>
 inline std::ostream &operator<<(std::ostream &o, Array<T> const &i)
 {
 	o << "Printing Array of size " << i.size() << " : " << std::endl;
-	for (unsigned x = 0; x < i.size(); x++)
+	for (unsigned int x = 0; x < i.size(); x++)
 		o << "[" << x << "] : " << i.getValue(x) << ", ";
 	o << std::endl;
 	return (o);

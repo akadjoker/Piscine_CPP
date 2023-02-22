@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 12:54:52 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/21 15:50:39 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/22 13:11:10 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,7 @@ float Data::getRatio()
 std::ostream &operator<<( std::ostream & ost, Data &data)
 {
   ost << "Data [name=" << data.getName() << ", size=" << data.getSize() << std::fixed <<", ratio=" << data.getRatio() << "]";
-
-//        ost << "NAME ("<< m_name << "), SIZE(" << m_size << "), " << std::fixed<< " RATIO("<< ratio<<")" << std::endl;
-return ost;
+  return ost;
 }    
   
 
