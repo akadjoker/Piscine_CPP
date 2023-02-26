@@ -6,43 +6,39 @@
 #    By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#              #
-#    Updated: 2023/02/21 18:08:30 by lrosa-do         ###   ########.fr        #
+#    Updated: 2023/02/26 12:03:20 by lrosa-do         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	myarray
 
-CC		=	c++
+NAME = array
+INC = ./include
+SRC = $(shell find src/*.cpp)
+OBJ = $(SRC:.cpp=.o)
 
-FLAGS	=	-Wall -Wextra -Werror -g -std=c++98 -fsanitize=address
+CC = c++
+CFLAGS = -std=c++98 -g -Wall -Wextra -Wall -fsanitize=address 
+RM = rm -rf
 
-SRC		=	main.cpp \
+%.o: %.cpp
+	$(CC) $(CFLAGS) -I $(INC) -c $< -o $@
 
-OBJ		:=	$(addprefix ./obj/,$(SRC:%.cpp=%.o))
-
-DEP		=	$(addprefix ./obj/,$(OBJ:%.o=%.d))
-
-RM		=	rm -rf
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $^ -o $@
+	./$(NAME)
 
 all: $(NAME)
 
--include $(DEP)
-
-./obj/%.o: ./%.cpp
-	@mkdir -p $(@D)
-	$(CC) $(FLAGS) -o $@ -c $<
-
-$(NAME): $(OBJ)
-	@$(CC) $(FLAGS) -o $(NAME) $(OBJ)
-	./$(NAME)
-
 clean:
-	$(RM) obj/
+	$(RM) $(OBJ)
 
-fclean:
-	@$(RM) obj/
-	@$(RM) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+run: $(NAME)
+	@./$(NAME)
+
+.PHONY: all, clean, fclean, re

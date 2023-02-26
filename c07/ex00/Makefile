@@ -6,7 +6,7 @@
 #    By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#              #
-#    Updated: 2023/02/21 17:36:19 by lrosa-do         ###   ########.fr        #
+#    Updated: 2023/02/26 12:09:53 by lrosa-do         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,12 @@ SRC		=	main.cpp \
 
 OBJ		:=	$(addprefix ./obj/,$(SRC:%.cpp=%.o))
 
-DEP		=	$(addprefix ./obj/,$(OBJ:%.o=%.d))
 
 RM		=	rm -rf
 
 all: $(NAME)
 
--include $(DEP)
+
 
 ./obj/%.o: ./%.cpp
 	@mkdir -p $(@D)

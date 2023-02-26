@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:57 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/22 16:53:57 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 17:42:39 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,9 +134,9 @@ int Span::longestSpan()
 	return (max - min);
 }
 
-const char* Span::Full::what() const throw() {return ("addNumber failed");}
-const char* Span::TooSmall::what() const throw() {return ("Cannot find shortest span with fewer than 2 numbers");}
-const char* Span::OutOfRange::what() const throw() {return ("index out of range");}
+const char* Span::Full::what() const throw() {return ("\e[0;38;5;9m addNumber failed \e[0m");}
+const char* Span::TooSmall::what() const throw() {return ("\e[0;38;5;9m Cannot find shortest span with fewer than 2 numbers \e[0m");}
+const char* Span::OutOfRange::what() const throw() {return ("\e[0;38;5;9m index out of range \e[0m");}
 
 
 std::ostream &operator<<(std::ostream &o,  Span &i) 

@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:49 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/22 17:29:39 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:11:31 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ int main()
 		std::list<int> mstack;
 		mstack.push_back(5);
 		mstack.push_back(17);
+		//list nao tem pop
 		std::cout << 17 << std::endl;
 		mstack.pop_back();
 		std::cout << mstack.size() << std::endl;

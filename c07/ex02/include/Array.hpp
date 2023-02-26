@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/22 16:03:17 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 11:48:04 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,11 @@ public:
     
 
     Array(const Array<T>& other)
-        : m_size(other.m_size), m_data(new T[other.m_size])
+        : m_size(other.m_size)
     {
-          std::cout << "Deep Copy Constructor called" << std::endl;
-         for (unsigned int i = 0; i < m_size; i++)
+        std::cout << "Deep Copy Constructor called" << std::endl;
+        m_data = new T[other.m_size];
+        for (unsigned int i = 0; i < m_size; i++)
         {
             m_data[i] = other.m_data[i];
         }
@@ -54,7 +55,7 @@ public:
         
     ~Array()
     {
-       std::cout << "Destructor called" << std::endl;
+        std::cout << "Destructor called" << std::endl;
         if(m_data)
             delete[] m_data;
     }
@@ -82,6 +83,7 @@ public:
             throw Array::IndexOutOfRangeException();
         m_data[index] = value;
     };
+    
     T	getValue(unsigned int index) const
      {
         if (index >= m_size)
@@ -111,7 +113,7 @@ private:
 		public :
 		virtual const char	*what(void) const throw()
 		{
-			return ("Index out of range");
+			return ("\e[0;31m Index out of range\e[0m");
 		}
 	};
 
@@ -124,8 +126,15 @@ template <typename T>
 inline std::ostream &operator<<(std::ostream &o, Array<T> const &i)
 {
 	o << "Printing Array of size " << i.size() << " : " << std::endl;
-	for (unsigned int x = 0; x < i.size(); x++)
-		o << "[" << x << "] : " << i.getValue(x) << ", ";
+    o << "(";
+	for (unsigned x = 0; x < i.size(); x++)
+    {
+        if (x < i.size()-1)
+		    o << "[" << x << "] : " << i.getValue(x) << ", ";
+        else
+            o << "[" << x << "] : " << i.getValue(x) << ")";
+        
+    }
 	o << std::endl;
 	return (o);
 }

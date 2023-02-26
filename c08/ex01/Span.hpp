@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:49 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/22 16:48:58 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 17:42:45 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ class Span
 			class Full : public std::exception {virtual const char* what() const throw();};
 			class TooSmall : public std::exception {virtual const char* what() const throw();};
 			class OutOfRange : public std::exception {virtual const char* what() const throw();};
+		
 
 };
 

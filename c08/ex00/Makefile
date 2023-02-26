@@ -6,11 +6,14 @@
 #    By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#              #
-#    Updated: 2023/02/22 16:57:25 by lrosa-do         ###   ########.fr        #
+#    Updated: 2023/02/26 12:39:16 by lrosa-do         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+
+
 NAME	=	easyfind
+
 
 CC		=	c++
 
@@ -20,13 +23,12 @@ SRC		=	main.cpp
 
 OBJ		:=	$(addprefix ./obj/,$(SRC:%.cpp=%.o))
 
-DEP		=	$(addprefix ./obj/,$(OBJ:%.o=%.d))
 
 RM		=	rm -rf
 
 all: $(NAME)
 
--include $(DEP)
+
 
 ./obj/%.o: ./%.cpp
 	@mkdir -p $(@D)

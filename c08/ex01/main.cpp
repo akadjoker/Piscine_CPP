@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:41 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/22 16:54:33 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 14:03:00 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ int main()
 		try
 		{
 
-			span.addRange(0,20000);
+			span.addRange(0,20502);
 			std::cout << "Shortest span: " << span.shortestSpan() << std::endl;
 			std::cout << "Longest  span: " << span.longestSpan() << std::endl;
 	

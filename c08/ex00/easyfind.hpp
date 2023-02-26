@@ -5,38 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/22 14:30:48 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/22 14:53:27 by lrosa-do         ###   ########.fr       */
+/*   Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#             */
+/*   Updated: 2023/02/26 12:55:45 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
 #include <iostream>
 #include <string>
-#include <list>
 #include <vector>
 #include <algorithm>
-#include <stdexcept>
 
 class NotFound : public std::exception 
 {
-	virtual const char* what() const throw() 
-	{
-		
-		return ("\e[0;38;5;9m Content not found \n\e[0m");
-    }
+	virtual const char* what() const throw();
 };
-
-
-
-
-template<typename T>
-typename T::iterator easyfind(T& container, int value)
+const char* NotFound::what() const throw() 
 {
-    typename T::iterator it = std::find(container.begin(), container.end(), value);
-    if (it == container.end()) 
+	return ("\e[0;31m Error: Value not found. \e[0m");
+}
+
+template <typename T>
+int easyfind(T& cont, int n)
+{
+	typename T::iterator it;
+
+	try 
 	{
-       throw NotFound();
-    }
-    return it;
+		it = std::find(cont.begin(), cont.end(), n);
+
+		if (*it != n || it == cont.end())
+			throw NotFound();
+		//find the value so, get the index of the bad boy :P (current - last count && get the index simples :P )
+		if (it != cont.end()) 
+			return (it - cont.begin());
+	}
+	catch (std::exception &e) 
+	{
+		std::cout << e.what() << std::endl;
+		return -1;
+	}
+	
+
+	return -1;
 }
