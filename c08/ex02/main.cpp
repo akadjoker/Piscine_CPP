@@ -6,13 +6,14 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:49 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/26 14:11:31 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 18:02:00 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <stack>
 #include <list>
+#include <cassert>
 #include "MutantStack.hpp"
 
 int main()

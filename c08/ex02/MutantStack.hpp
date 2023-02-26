@@ -6,45 +6,77 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:49 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/26 14:09:16 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/26 18:02:25 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #pragma once 
+# include <stack>
+# include <iterator>
 
-#include <iostream>
-#include <stack>
-#include <deque>
-#include <cassert>
-
-/*
-O std::stack é um container adaptador da STL que fornece uma interface para trabalhar com pilhas (stacks) em C++. 
-Internamente, o std::stack é implementado em termos de outra estrutura de dados, geralmente um std::deque ou std::list. 
-O std::stack fornece apenas um subconjunto de funcionalidades do seu 
-contêiner subjacente e é projetado para ser mais fácil de usar para tarefas específicas de pilha, como push e pop
-*/
-
-template <typename T, typename Container=std::deque<T> >
-class MutantStack : public std::stack<T, Container>
+template < typename T >
+class	MutantStack: public std::stack<T>
 {
+
+	
+
 	public:
-		MutantStack() 
-		{};
-		~MutantStack()
-		 {};
-		MutantStack(MutantStack const *m) : std::stack<T, Container>(m)
-		{}
-		MutantStack &operator=(MutantStack const &m) 
-		{
-			std::stack<T, Container>::operator=(m); return *this;
-		}
-		typedef typename Container::iterator iterator;
-		typedef typename Container::reverse_iterator riterator;
-		
-		iterator begin() {return this->c.begin();}
-		iterator end() {return this->c.end();}
-		riterator rbegin() {return this->c.rbegin();}
-		riterator rend() {return this->c.rend();}
+		~MutantStack();
+		MutantStack( void );
+		MutantStack( MutantStack const & ref );
+		MutantStack & operator=( MutantStack const & rhs );
+
+		typedef typename std::stack<T>::container_type::iterator iterator;
+		typedef typename std::stack<T>::container_type::reverse_iterator riterator;
+
+		iterator begin( void );
+		iterator end( void );
+		riterator rbegin( void );
+		riterator rend( void );
 
 };
+
+template< typename T >
+MutantStack<T>::~MutantStack()
+{}
+
+template< typename T >
+MutantStack<T>::MutantStack( void )
+{}
+
+template< typename T >
+MutantStack<T>::MutantStack( MutantStack<T> const & ref )
+: std::stack<T>(ref)
+{}
+
+template < typename T >
+MutantStack<T> & MutantStack<T>::operator=( MutantStack const & rhs )
+{
+	std::stack<T>::operator=(rhs);
+	return (*this);
+}
+
+template < typename T >
+typename MutantStack<T>::iterator MutantStack<T>::begin( void )
+{
+	return (std::stack<T>::c.begin());
+}
+
+template < typename T >
+typename MutantStack<T>::iterator  MutantStack<T>::end( void )
+{
+	return (std::stack<T>::c.end());
+}
+
+template < typename T >
+typename MutantStack<T>::riterator MutantStack<T>::rbegin( void )
+{
+	return (std::stack<T>::c.rbegin());
+}
+
+template < typename T >
+typename MutantStack<T>::riterator MutantStack<T>::rend( void )
+{
+	return (std::stack<T>::c.rend());
+}
