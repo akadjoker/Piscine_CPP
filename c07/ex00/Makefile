@@ -6,7 +6,7 @@
 #    By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 17:33:17 by lrosa-do          #+#    #+#              #
-#    Updated: 2023/02/26 12:09:53 by lrosa-do         ###   ########.fr        #
+#    Updated: 2023/02/27 07:22:47 by lrosa-do         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC		=	c++
 
 FLAGS	=	-Wall -Wextra -Werror -g -std=c++98 -fsanitize=address
 
-SRC		=	main.cpp \
+SRC		=	main.cpp
 
 OBJ		:=	$(addprefix ./obj/,$(SRC:%.cpp=%.o))
 
