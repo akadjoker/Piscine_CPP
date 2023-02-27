@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:57 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/26 17:42:39 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/27 07:50:55 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int Span::operator[](unsigned int i)
 
 void Span::addNumber(int n)
 {
-	if (m_numbers.size() == m_capacity)
+	if (m_numbers.size() >= m_capacity)
 	{
 		throw Full();
 	}

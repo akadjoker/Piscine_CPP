@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:57:49 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/02/26 17:42:45 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/02/27 07:54:14 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,11 @@ class Span
 		
 		void addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 
-		
+		/*
+		The span between two integers is defined as the 
+		absolute difference between them. 
+		For example, the span between 3 and 8 is 5 (i.e., |3-8| = 5).
+		*/
 		int shortestSpan();
 		int longestSpan();
 
