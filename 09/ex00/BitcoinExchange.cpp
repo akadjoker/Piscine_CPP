@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 16:27:07 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/04/10 18:46:46 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:26:46 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ void BitcoinExchange::readCsvFile(const std::string &fileName)
 	{
 		exchange_rate = std::atof(date.substr(date.find(',', 0) + 1).c_str());
 		date = date.substr(0, date.find(',', 0));
+		//std::cout << date << " " << exchange_rate << std::endl;
 		this->m_bitcoinPrices[date] = exchange_rate;
 	}
 	file.close();

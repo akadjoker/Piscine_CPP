@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 10:01:48 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/04/11 09:52:28 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:29:43 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void PmergeMe::printDeque()
 	}
 	std::cout << std::endl;
 }
-void is_Num(char *tab)
+void PmergeMe::is_Num(char *tab)
 {
 	std::string str = tab;
 	if (str[0] == '-')

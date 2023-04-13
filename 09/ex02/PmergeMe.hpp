@@ -6,7 +6,7 @@
 /*   By: lrosa-do <lrosa-do@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 10:01:48 by lrosa-do          #+#    #+#             */
-/*   Updated: 2023/04/11 09:30:09 by lrosa-do         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:29:36 by lrosa-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ public:
 	void printDeque();
 
 private:
+
+	void is_Num(char *tab);
 	void merge(std::vector<int> &arr, int left, int mid, int right);
 	void insertionSort(std::vector<int> &arr, int left, int right);
 	void mergeInsertSort(std::vector<int> &arr, int left, int right, int threshold);
